@@ -20,7 +20,7 @@ namespace SOFT562Week18
         /// The username that we use when connecting to the server. It has the form
         /// soft562_<your name>.
         /// </summary>
-        internal const string USER_NAME = "your username";
+        internal const string USER_NAME = "ISAD157_JKinver";
 
         /// <summary>
         /// The name or network address of the server. The default value is
@@ -32,12 +32,12 @@ namespace SOFT562Week18
         /// The name of the database to use. Recall that the names of databases
         /// on Xserve have the form isad157_<your name>.
         /// </summary>
-        internal const string DATABASE_NAME = "isad157_yourname";
+        internal const string DATABASE_NAME = "isad157_jkinver";
 
         /// <summary>
         /// The password for the MySQL account being used.
         /// </summary>
-        internal const string PASSWORD = "your password";
+        internal const string PASSWORD = "ISAD157_22224610";
 
         /// <summary>
         /// Security state of connection to server.
