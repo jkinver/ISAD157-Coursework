@@ -55,7 +55,7 @@
     <Compile Include="DatabaseForm.Designer.cs">
       <DependentUpon>DatabaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBConnect.cs" />
+    <Compile Include="MySQLConnector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DatabaseForm.resx">

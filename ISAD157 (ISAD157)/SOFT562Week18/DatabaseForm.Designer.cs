@@ -28,67 +28,115 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridViewCustomer = new System.Windows.Forms.DataGridView();
-            this.dataGridViewProduct = new System.Windows.Forms.DataGridView();
+            this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
+            this.dataGridViewFriends = new System.Windows.Forms.DataGridView();
             this.comboBoxQueryChoice = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduct)).BeginInit();
+            this.dataGridViewWorkplaces = new System.Windows.Forms.DataGridView();
+            this.dataGridViewSchoolOrUni = new System.Windows.Forms.DataGridView();
+            this.dataGridViewMessages = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFriends)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorkplaces)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchoolOrUni)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMessages)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridViewCustomer
+            // dataGridViewUsers
             // 
-            this.dataGridViewCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCustomer.Location = new System.Drawing.Point(20, 15);
-            this.dataGridViewCustomer.Name = "dataGridViewCustomer";
-            this.dataGridViewCustomer.RowHeadersWidth = 51;
-            this.dataGridViewCustomer.RowTemplate.Height = 24;
-            this.dataGridViewCustomer.Size = new System.Drawing.Size(368, 370);
-            this.dataGridViewCustomer.TabIndex = 0;
+            this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUsers.Location = new System.Drawing.Point(20, 15);
+            this.dataGridViewUsers.Name = "dataGridViewUsers";
+            this.dataGridViewUsers.RowHeadersWidth = 51;
+            this.dataGridViewUsers.RowTemplate.Height = 24;
+            this.dataGridViewUsers.Size = new System.Drawing.Size(368, 370);
+            this.dataGridViewUsers.TabIndex = 0;
             // 
-            // dataGridViewProduct
+            // dataGridViewFriends
             // 
-            this.dataGridViewProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProduct.Location = new System.Drawing.Point(414, 15);
-            this.dataGridViewProduct.Name = "dataGridViewProduct";
-            this.dataGridViewProduct.RowHeadersWidth = 51;
-            this.dataGridViewProduct.RowTemplate.Height = 24;
-            this.dataGridViewProduct.Size = new System.Drawing.Size(364, 370);
-            this.dataGridViewProduct.TabIndex = 1;
+            this.dataGridViewFriends.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFriends.Location = new System.Drawing.Point(414, 15);
+            this.dataGridViewFriends.Name = "dataGridViewFriends";
+            this.dataGridViewFriends.RowHeadersWidth = 51;
+            this.dataGridViewFriends.RowTemplate.Height = 24;
+            this.dataGridViewFriends.Size = new System.Drawing.Size(368, 370);
+            this.dataGridViewFriends.TabIndex = 1;
             // 
             // comboBoxQueryChoice
             // 
             this.comboBoxQueryChoice.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxQueryChoice.FormattingEnabled = true;
             this.comboBoxQueryChoice.Items.AddRange(new object[] {
-            "Customers Table",
-            "Products Table"});
-            this.comboBoxQueryChoice.Location = new System.Drawing.Point(20, 404);
+            "Users Table",
+            "Friends Table",
+            "Workplaces Table",
+            "Schools/Universities Table",
+            "Messages Table"});
+            this.comboBoxQueryChoice.Location = new System.Drawing.Point(20, 767);
             this.comboBoxQueryChoice.Name = "comboBoxQueryChoice";
-            this.comboBoxQueryChoice.Size = new System.Drawing.Size(757, 34);
+            this.comboBoxQueryChoice.Size = new System.Drawing.Size(762, 34);
             this.comboBoxQueryChoice.TabIndex = 2;
             this.comboBoxQueryChoice.SelectedIndexChanged += new System.EventHandler(this.comboBoxQueryChoice_SelectedIndexChanged);
+            // 
+            // dataGridViewWorkplaces
+            // 
+            this.dataGridViewWorkplaces.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewWorkplaces.Location = new System.Drawing.Point(804, 15);
+            this.dataGridViewWorkplaces.Name = "dataGridViewWorkplaces";
+            this.dataGridViewWorkplaces.RowHeadersWidth = 51;
+            this.dataGridViewWorkplaces.RowTemplate.Height = 24;
+            this.dataGridViewWorkplaces.Size = new System.Drawing.Size(368, 370);
+            this.dataGridViewWorkplaces.TabIndex = 3;
+            // 
+            // dataGridViewSchoolOrUni
+            // 
+            this.dataGridViewSchoolOrUni.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSchoolOrUni.Location = new System.Drawing.Point(20, 391);
+            this.dataGridViewSchoolOrUni.Name = "dataGridViewSchoolOrUni";
+            this.dataGridViewSchoolOrUni.RowHeadersWidth = 51;
+            this.dataGridViewSchoolOrUni.RowTemplate.Height = 24;
+            this.dataGridViewSchoolOrUni.Size = new System.Drawing.Size(368, 370);
+            this.dataGridViewSchoolOrUni.TabIndex = 4;
+            // 
+            // dataGridViewMessages
+            // 
+            this.dataGridViewMessages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMessages.Location = new System.Drawing.Point(414, 391);
+            this.dataGridViewMessages.Name = "dataGridViewMessages";
+            this.dataGridViewMessages.RowHeadersWidth = 51;
+            this.dataGridViewMessages.RowTemplate.Height = 24;
+            this.dataGridViewMessages.Size = new System.Drawing.Size(368, 370);
+            this.dataGridViewMessages.TabIndex = 5;
             // 
             // DatabaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1262, 813);
+            this.Controls.Add(this.dataGridViewMessages);
+            this.Controls.Add(this.dataGridViewSchoolOrUni);
+            this.Controls.Add(this.dataGridViewWorkplaces);
             this.Controls.Add(this.comboBoxQueryChoice);
-            this.Controls.Add(this.dataGridViewProduct);
-            this.Controls.Add(this.dataGridViewCustomer);
+            this.Controls.Add(this.dataGridViewFriends);
+            this.Controls.Add(this.dataGridViewUsers);
             this.Name = "DatabaseForm";
             this.Text = "Database Form Test";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFriends)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorkplaces)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchoolOrUni)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMessages)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridViewCustomer;
-        private System.Windows.Forms.DataGridView dataGridViewProduct;
+        private System.Windows.Forms.DataGridView dataGridViewUsers;
+        private System.Windows.Forms.DataGridView dataGridViewFriends;
         private System.Windows.Forms.ComboBox comboBoxQueryChoice;
+        private System.Windows.Forms.DataGridView dataGridViewWorkplaces;
+        private System.Windows.Forms.DataGridView dataGridViewSchoolOrUni;
+        private System.Windows.Forms.DataGridView dataGridViewMessages;
     }
 }
 

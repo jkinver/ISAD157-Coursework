@@ -34,11 +34,11 @@ namespace SOFT562Week18
                 //
                 /////////////////////////////////////////////////////////////////
 
-                string connectionString = "SERVER=" + DBConnect.SERVER + ";" +
-                    "DATABASE=" + DBConnect.DATABASE_NAME + ";" + "UID=" +
-                    DBConnect.USER_NAME + ";" + "PASSWORD=" +
-                    DBConnect.PASSWORD + ";" + "SslMode=" +
-                    DBConnect.SslMode + ";";
+                string connectionString = "SERVER=" + MySQLConnector.SERVER + ";" +
+                    "DATABASE=" + MySQLConnector.DATABASE_NAME + ";" + "UID=" +
+                    MySQLConnector.USER_NAME + ";" + "PASSWORD=" +
+                    MySQLConnector.PASSWORD + ";" + "SslMode=" +
+                    MySQLConnector.SslMode + ";";
 
                 ///////////////////////////////////////////////////////////////
                 //
@@ -54,15 +54,15 @@ namespace SOFT562Week18
                     ///////////////////////////////////////////////////////////
                     //
                     // The query which retrieves all the records in the
-                    // customers table.
+                    // users table.
                     //
                     ///////////////////////////////////////////////////////////
-                    string query = "SELECT * FROM soft562_marco.customer";
+                    string query = "SELECT * FROM isad157_jkinver.users";
 
                     ///////////////////////////////////////////////////////////
                     //
                     // Opens a database connection with the property settings
-                    // specified by the ConnectionString.
+                    // specified by the connectionString.
                     //
                     ///////////////////////////////////////////////////////////
                     connection.Open();
@@ -83,19 +83,19 @@ namespace SOFT562Week18
                     //
                     ///////////////////////////////////////////////////////////
                     MySqlDataAdapter sqlDA = new MySqlDataAdapter(cmd);
-                    DataTable customerDataTable = new DataTable();
-                    sqlDA.Fill(customerDataTable);
+                    DataTable usersDataTable = new DataTable();
+                    sqlDA.Fill(usersDataTable);
 
                     ///////////////////////////////////////////////////////////
                     //
-                    // Bind the ACME customer table to the Data Grid View.
+                    // Bind the Facebook users table to the Data Grid View.
                     //
                     ///////////////////////////////////////////////////////////
-                    dataGridViewCustomer.DataSource = customerDataTable;
+                    dataGridViewUsers.DataSource = usersDataTable;
 
                 } // End of using (MySqlConnection connection = ...
             }
-            else
+            else if (comboBoxQueryChoice.SelectedIndex == 1)
             {
                 /////////////////////////////////////////////////////////////////
                 //
@@ -109,11 +109,11 @@ namespace SOFT562Week18
                 //
                 /////////////////////////////////////////////////////////////////
 
-                string connectionString = "SERVER=" + DBConnect.SERVER + ";" +
-                    "DATABASE=" + DBConnect.DATABASE_NAME + ";" + "UID=" +
-                    DBConnect.USER_NAME + ";" + "PASSWORD=" +
-                    DBConnect.PASSWORD + ";" + "SslMode=" +
-                    DBConnect.SslMode + ";";
+                string connectionString = "SERVER=" + MySQLConnector.SERVER + ";" +
+                    "DATABASE=" + MySQLConnector.DATABASE_NAME + ";" + "UID=" +
+                    MySQLConnector.USER_NAME + ";" + "PASSWORD=" +
+                    MySQLConnector.PASSWORD + ";" + "SslMode=" +
+                    MySQLConnector.SslMode + ";";
 
                 ///////////////////////////////////////////////////////////////
                 //
@@ -129,10 +129,10 @@ namespace SOFT562Week18
                     ///////////////////////////////////////////////////////////
                     //
                     // The query which retrieves all the records in the
-                    // customers table.
+                    // friends table.
                     //
                     ///////////////////////////////////////////////////////////
-                    string query = "SELECT * FROM soft562_marco.product";
+                    string query = "SELECT * FROM isad157_jkinver.user_friend_link";
 
                     ///////////////////////////////////////////////////////////
                     //
@@ -158,17 +158,106 @@ namespace SOFT562Week18
                     //
                     ///////////////////////////////////////////////////////////
                     MySqlDataAdapter sqlDA = new MySqlDataAdapter(cmd);
-                    DataTable productDataTable = new DataTable();
-                    sqlDA.Fill(productDataTable);
+                    DataTable friendsDataTable = new DataTable();
+                    sqlDA.Fill(friendsDataTable);
 
                     ///////////////////////////////////////////////////////////
                     //
-                    // Bind the ACME customer table to the Data Grid View.
+                    // Bind the Facebook friends table to the Data Grid View.
                     //
                     ///////////////////////////////////////////////////////////
-                    dataGridViewProduct.DataSource = productDataTable;
+                    dataGridViewFriends.DataSource = friendsDataTable;
                 }
-            } // End of else...
+            } //end of else if
+            
+            else if (comboBoxQueryChoice.SelectedIndex == 2)
+            {
+                string connectionString = "SERVER=" + MySQLConnector.SERVER + ";" +
+                    "DATABASE=" + MySQLConnector.DATABASE_NAME + ";" + "UID=" +
+                    MySQLConnector.USER_NAME + ";" + "PASSWORD=" +
+                    MySQLConnector.PASSWORD + ";" + "SslMode=" +
+                    MySQLConnector.SslMode + ";";
+
+                using (MySqlConnection connection =
+                    new MySqlConnection(connectionString))
+                {
+                    //the SQL query itself that is being used through C#
+                    string query = "SELECT * FROM isad157_jkinver.workplaces";
+                    connection.Open();
+                    
+                    //submits the above string to be used by MySQL
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                    // The MySqlDataAdapter represents a set of data commands
+                    // and a database connection that are used to fill a
+                    // dataset and update a MySQL database.
+                    MySqlDataAdapter sqlDA = new MySqlDataAdapter(cmd);
+                    DataTable workplacesDataTable = new DataTable();
+                    sqlDA.Fill(workplacesDataTable);
+
+                    //attach the information from the workplaces table
+                    dataGridViewWorkplaces.DataSource = workplacesDataTable;
+                }
+            } //end of else if
+            else if (comboBoxQueryChoice.SelectedIndex == 3)
+            {
+                string connectionString = "SERVER=" + MySQLConnector.SERVER + ";" +
+                    "DATABASE=" + MySQLConnector.DATABASE_NAME + ";" + "UID=" +
+                    MySQLConnector.USER_NAME + ";" + "PASSWORD=" +
+                    MySQLConnector.PASSWORD + ";" + "SslMode=" +
+                    MySQLConnector.SslMode + ";";
+
+                using (MySqlConnection connection =
+                    new MySqlConnection(connectionString))
+                {
+                    //the SQL query itself that is being used through C#
+                    string query = "SELECT * FROM isad157_jkinver.schools";
+                    connection.Open();
+
+                    //submits the above string to be used by MySQL
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                    // The MySqlDataAdapter represents a set of data commands
+                    // and a database connection that are used to fill a
+                    // dataset and update a MySQL database.
+                    MySqlDataAdapter sqlDA = new MySqlDataAdapter(cmd);
+                    DataTable schoolOrUniDataTable = new DataTable();
+                    sqlDA.Fill(schoolOrUniDataTable);
+
+                    //attach the information from the school/uni table
+                    dataGridViewSchoolOrUni.DataSource = schoolOrUniDataTable;
+                }
+            } //end of else if
+            else if (comboBoxQueryChoice.SelectedIndex == 4)
+            {
+                string connectionString = "SERVER=" + MySQLConnector.SERVER + ";" +
+                    "DATABASE=" + MySQLConnector.DATABASE_NAME + ";" + "UID=" +
+                    MySQLConnector.USER_NAME + ";" + "PASSWORD=" +
+                    MySQLConnector.PASSWORD + ";" + "SslMode=" +
+                    MySQLConnector.SslMode + ";";
+
+                using (MySqlConnection connection =
+                    new MySqlConnection(connectionString))
+                {
+                    //the SQL query itself that is being used through C#
+                    string query = "SELECT * FROM isad157_jkinver.messages";
+                    connection.Open();
+
+                    //submits the above string to be used by MySQL
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                    // The MySqlDataAdapter represents a set of data commands
+                    // and a database connection that are used to fill a
+                    // dataset and update a MySQL database.
+                    MySqlDataAdapter sqlDA = new MySqlDataAdapter(cmd);
+                    DataTable messagesDataTable = new DataTable();
+                    sqlDA.Fill(messagesDataTable);
+
+                    //attach the information from the messages table
+                    dataGridViewMessages.DataSource = messagesDataTable;
+                }
+            }
+
         } // End of private void comboBoxQueryChoice_SelectedIndexChanged
     }
 }

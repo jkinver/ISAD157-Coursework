@@ -14,7 +14,7 @@ using MySql.Data.MySqlClient;
 
 namespace SOFT562Week18
 {
-    class DBConnect
+    class MySQLConnector
     {
         /// <summary>
         /// The username that we use when connecting to the server. It has the form
