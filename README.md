@@ -1,2 +1,3 @@
 # ISAD157 Coursework
- The GitHub for my ISAD157 Coursework regarding a relational database of Facebook users.
+The GitHub for my ISAD157 Coursework regarding a relational database of Facebook users.
+This project involves the creation of Unified Modelling Language (UML) diagrams that together describe the different aspects of the  database mentioned above. The database contains information on fictitious Facebook users and is attached to a C# program that displays it through a Windows Form application. The scenario created for this coursework is that an investigator (who works for law enforcement) has been given access to a sample of a larger (non-existent) database managed by a third-party that is concerned there may be suspicious activity within their database. This potential activity relates to the investigator's case.
